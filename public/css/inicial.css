@@ -15,29 +15,81 @@ footer .copyright{
     color: orange;
 }
 
-.header .nav{
-    margin-top: 2%;
-    margin-left: 5%;
+nav a{
+    color: white;
     font-size: 20px;
-    
 }
 
-.header ul{
-    list-style: none;
+nav a:hover{
+    color:blue;
+}
+
+.copyright{
+    font-size: 20px;
     text-align: center;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 10px;
+}
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+/* ======================== */
+.icons {
+    display: flex;
+    column-gap: 25px;
 }
 
-.header .nav a{
-    color:white;
+.icon {
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 50%;
+    outline: 2px solid #fff;
+    transition-property:
+        outline-offset, outline-color,
+        background-color;
+    transition-duration: .25s;
 }
 
-.header .nav a:hover{
-    color:rgb(255, 115, 0);
+.icon:hover {
+    outline-offset: 4px;
 }
 
-.header .nav .selectCity{
-    color:orange;
+.icon:hover i {
+    animation: shake .25s;
+}
+
+.icon--linkedin:hover {
+    background-color: #0077b5;
+    outline-color: #0077b5;
+}
+
+.icon--github:hover {
+    background-color: #2ea44f;
+    outline-color: #2ea44f;
+}
+
+@keyframes shake {
+    10% {
+        transform: rotate(15deg);
+    }
+
+    20% {
+        transform: rotate(-15deg);
+    }
+
+    30% {
+        transform: rotate(15deg);
+    }
+
+    40% {
+        transform: rotate(-15deg);
+    }
 }

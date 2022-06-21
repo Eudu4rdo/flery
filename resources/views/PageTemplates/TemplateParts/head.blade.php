@@ -6,4 +6,6 @@
     <link href="{{ asset('css/inicial.css') }}" media="all" rel="stylesheet" type="text/css" />
     <link rel="icon" href="{{asset('img/logoFlery.png')}}" sizes="32x32" />
     <link rel="icon" href="{{asset('img/logoFlery.png')}}" sizes="192x192" />
+    <!-- Remix icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
