@@ -14,3 +14,30 @@ footer .copyright{
     background-color: white;
     color: orange;
 }
+
+.header .nav{
+    margin-top: 2%;
+    margin-left: 5%;
+    font-size: 20px;
+    
+}
+
+.header ul{
+    list-style: none;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 10px;
+}
+
+.header .nav a{
+    color:white;
+}
+
+.header .nav a:hover{
+    color:rgb(255, 115, 0);
+}
+
+.header .nav .selectCity{
+    color:orange;
+}
