@@ -28,7 +28,9 @@
         </article>
         @endforeach
     </section>
+        @if (empty($data_view['cardapio'][0]->nome))
+            <h2 class="title_pag" style="text-align: center; color:gray">Nenhum item incluso no cardapio</h2>
+        @endif
     @endif
 </div>
-    
 @endsection

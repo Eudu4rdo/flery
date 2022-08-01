@@ -15,7 +15,7 @@ class Restaurants extends Model
         return DB::select('select * from restaurantes');
     }
 
-    public static function getById(int $id): object{
+    public static function getById(int $id){
         $restaurant= DB::select('select * from restaurantes where id= :id', ['id'=>$id]);
         //dd($restaurant);
         if (count($restaurant) > 0)

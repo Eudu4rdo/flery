@@ -29,6 +29,9 @@
         </article>
         @endforeach
     </section>
+        @if (empty($data_view['results']))
+            <h2 class="title_pag" style="text-align: center; color:gray">Nenhum resultado encontrado!</h2>
+        @endif
     @endif
 </div>
 

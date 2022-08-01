@@ -11,7 +11,7 @@ class Cardapio extends Model
     use HasFactory;
     protected $table = 'produtos';
 
-    public static function getByText(String $text):array{
+    public static function getByText(String $text){
         return DB::select('select   p.id as idPrato,
                                     p.nome as nomePrato, 
                                     p.descricao as descricaoPrato, 
@@ -23,5 +23,10 @@ class Cardapio extends Model
                                     r.endereco as enderecoRestaurante,
                                     r.descricao as descricaoRestaurante
 	from produtos p inner join restaurantes r on (r.id = p.idRestaurante) where p.nome LIKE "%'.$text.'%" or p.descricao LIKE "%'.$text.'%" or r.nome LIKE "%'.$text.'%"');
+    /*if($response!=''){
+        return $response;
+    }else{
+        return null;
+    }*/
     }
 }
