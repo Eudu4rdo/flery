@@ -9,7 +9,7 @@
     
   <div class="col-lg-9 text-uppercase">
     <nav class="navbar navbar-expand-lg justify-content-around d-flex">
-      <ul class="navbar-nav mr-auto">
+      {{-- <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <a class="nav-link" href="#">Promoções</a>
         </li>
@@ -28,7 +28,11 @@
             <a class="dropdown-item" href="#">Uberlândia-MG</a>
           </div>
         </li>
-      </ul>
+      </ul> --}}
+      <div class="input-group">
+        <input type="search" class="form-control rounded" placeholder="Busca" aria-label="Busca" aria-describedby="search-addon" />
+        <button type="button" class="btn btn-outline-primary">Busca</button>
+      </div>
     </nav>
   </div>
     

@@ -1,5 +1,9 @@
-<footer>
-  <div class="col-lg-12 d-flex justify-content-center">
+<footer style="width: 100%;
+height: 150px;
+position: absolute;
+bottom: 0px;
+margin-top: 20px">
+  {{-- <div class="col-lg-12 d-flex justify-content-center">
     <div class="col-lg-3 p-2 m-1">
     <div class="d-flex flex-column">
         <div class="row  m-auto">
@@ -26,7 +30,7 @@
       Se inscreva para receber novidades:
     </div>
   </div>
-  <br>
+  <br> --}}
   <div class="copyright col-lg-6 justify-content-center inline-block">
       © 2020 Copyright:
       <a class="text-dark" href="{{ redirect('/') }}">Flery</a>
