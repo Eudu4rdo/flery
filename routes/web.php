@@ -18,3 +18,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [SearchController::class, 'view'])->name('home');
 Route::get('/restaurante/{id}', [RestaurantController::class, 'view'])->name('restaurante');
 Route::get('/search', [SearchController::class, 'search'])->name('search');
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
