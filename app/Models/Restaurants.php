@@ -8,7 +8,9 @@ use Illuminate\Support\Facades\DB;
 
 class Restaurants extends Model
 {
-    //use HasFactory;
+    use HasFactory;
+    protected $table = 'restaurantes';
+
     public static function getAll(): array{
         return DB::select('select * from restaurantes');
     }

@@ -9,30 +9,12 @@
     
   <div class="col-lg-9 text-uppercase">
     <nav class="navbar navbar-expand-lg justify-content-around d-flex">
-      {{-- <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Promoções</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Sobre nós</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Selecione sua cidade
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Franca-SP</a>
-            <a class="dropdown-item" href="#">Ribeirão-SP</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Uberaba-MG</a>
-            <a class="dropdown-item" href="#">Uberlândia-MG</a>
-          </div>
-        </li>
-      </ul> --}}
-      <div class="input-group">
-        <input type="search" class="form-control rounded" placeholder="Busca" aria-label="Busca" aria-describedby="search-addon" />
-        <button type="button" class="btn btn-outline-primary">Busca</button>
-      </div>
+      <form method="GET" action="{{ route('search') }}">
+        <div class="input-group">
+              <input type="input" class="form-control rounded" placeholder="Busca" aria-label="Busca" aria-describedby="search-addon" id="text" name="text" />
+              <button type="submit" class="btn btn-outline-primary" style="margin-left: 1%">Busca</button>
+        </div>
+    </form>
     </nav>
   </div>
     

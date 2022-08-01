@@ -15,5 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [SearchController::class, 'view']);
-Route::get('/restaurante/{id}', [RestaurantController::class, 'view']);
+Route::get('/', [SearchController::class, 'view'])->name('home');
+Route::get('/restaurante/{id}', [RestaurantController::class, 'view'])->name('restaurante');
+Route::get('/search', [SearchController::class, 'search'])->name('search');
