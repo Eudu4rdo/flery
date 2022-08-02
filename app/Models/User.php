@@ -58,4 +58,13 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function defaultProfilePhotoUrl()
+    {
+        $name = trim(collect(explode(' ', $this->name))->map(function ($segment) {
+            return mb_substr($segment, 0, 1);
+        })->join(' '));
+
+        return 'https://ui-avatars.com/api/?name='.urlencode($name).'&color=F7845C&background=FFFFFF';
+    }
 }
